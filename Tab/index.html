@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="icons/48.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="icons/128.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/TB.css"> <!-- 引入图标样式 -->
+    <link rel="stylesheet" href="css/SZ.css"> <!-- 引入设置按钮样式 -->
+</head>
+<body>
+    <div class="D" id="D">
+        <div class="D-1" id="D-1">
+            <!-- 设置按钮 -->
+            <div class="settings-button-container">
+                <img src="TU/icons/设置.png" alt="设置" id="settingsButton" class="settings-button">
+            </div>
+        </div>
+        <div class="D-2" id="D-2">
+            <!-- 搜索框区域 -->
+            <div class="D-2-1" id="D-2-1">
+                <!-- 引擎切换按钮 -->
+                <div class="D-2-1-1" id="D-2-1-1">
+                    <button id="engineToggle">
+                        <img id="engineIcon" src="TU/yinqing/百度.png" alt="百度" class="engine-icon">
+                    </button>
+                </div>
+                <!-- 搜索内容输入区域 -->
+                <div class="D-2-1-2" id="D-2-1-2">
+                    <form id="searchForm">
+                        <input type="text" id="searchInput" placeholder="请输入搜索内容...">
+                    </form>
+                </div>
+            </div>
+            <!-- 快捷方式区域 -->
+            <div class="D-2-2" id="D-2-2">
+                <!-- 图标将通过JavaScript动态生成 -->
+            </div>
+        </div>
+        <div class="D-3" id="D-3"></div>
+    </div>
+
+    <!-- 图标设置悬浮窗 -->
+    <div id="iconSettingsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>设置图标</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="iconList" class="icon-list">
+                    <!-- 图标选项将通过JavaScript动态生成 -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="saveIconSettings" class="btn-primary">保存</button>
+                <button id="cancelIconSettings" class="btn-secondary">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 设置悬浮窗（新增） -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content settings-modal-content">
+            <div class="modal-header">
+                <h3>设置</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body settings-modal-body">
+                <!-- 左右两部分 -->
+                <div class="settings-left">
+                    <div class="settings-menu-item active" data-target="wallpaper-settings">壁纸设置</div>
+                    <div class="settings-menu-item" data-target="search-settings">搜索设置</div>
+                    <div class="settings-menu-item" data-target="icon-settings">图标设置</div>
+                </div>
+                <div class="settings-right">
+                    <!-- 壁纸设置面板（默认显示） -->
+                    <div id="wallpaper-settings" class="settings-panel active">
+                        <h4>壁纸设置</h4>
+                        <button id="randomWallpaperBtn" class="btn-primary">随机切换壁纸</button>
+                        <div class="wallpaper-preview">
+                            <p>当前壁纸预览</p>
+                            <!-- 壁纸预览图将通过JS动态生成 -->
+                        </div>
+                    </div>
+                    <!-- 搜索设置面板 -->
+                    <div id="search-settings" class="settings-panel">
+                        <h4>搜索引擎</h4>
+                        <div class="search-engine-list">
+                            <!-- 搜索引擎选项将通过JS动态生成 -->
+                        </div>
+                    </div>
+                    <!-- 图标设置面板 -->
+                    <div id="icon-settings" class="settings-panel">
+                        <h4>快捷方式图标</h4>
+                        <button id="openIconSettings" class="btn-primary">管理图标</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="closeSettings" class="btn-secondary">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/TB.js"></script> <!-- 引入图标相关脚本 -->
+    <script src="js/SZ.js"></script> <!-- 引入设置按钮脚本 -->
+</body>
+</html>
+
+<!--个性化主页 - 美观的浏览器新标签页扩展-->
+
+<!--将您的浏览器新标签页替换为一个美观且功能丰富的个性化主页。该扩展提供了一个现代化的界面，带有搜索引擎快捷切换、壁纸背景和常用网站快捷方式等功能。-->
+
+<!--主要特性：-->
+<!-- - 多种搜索引擎支持：百度、谷歌、必应，可一键切换-->
+<!-- - 精美壁纸背景：支持多张壁纸随机切换，营造个性化浏览体验-->
+<!-- - 快捷方式图标：一键访问抖音、哔哩哔哩、DeepSeek、百度网盘等常用网站-->
+<!-- - 图标自定义：可选择显示或隐藏特定的快捷方式图标-->
+<!-- - 数据持久化：使用浏览器存储保存您的个性化设置-->
+
+<!--权限说明：-->
+<!-- - storage：用于保存您的搜索引擎选择、壁纸设置和图标显示偏好等个性化配置信息-->
+
+<!--这是一个轻量级但功能强大的新标签页替换扩展，让您的每次新建标签都充满美感和实用性。-->
